@@ -727,3 +727,4 @@ func GetHeadscaleConfig() (*Config, error) {
 func IsCLIConfigured() bool {
 	return viper.GetString("cli.address") != "" && viper.GetString("cli.api_key") != ""
 }
+
