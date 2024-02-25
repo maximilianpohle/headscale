@@ -143,6 +143,7 @@ type DERPConfig struct {
 
 type LogTailConfig struct {
 	Enabled bool
+	Server  string
 }
 
 type CLIConfig struct {
@@ -369,9 +370,10 @@ func GetDERPConfig() DERPConfig {
 
 func GetLogTailConfig() LogTailConfig {
 	enabled := viper.GetBool("logtail.enabled")
-
+	server := viper.GetBool("logtail.server")
 	return LogTailConfig{
 		Enabled: enabled,
+		Server: server
 	}
 }
 
